@@ -1,0 +1,19 @@
+--Create CLothing Store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, frequency_bought INTEGER);
+INSERT INTO store VALUES (1, "shirts", 15, 6, 2);
+INSERT INTO store VALUES (2, "pants", 12, 10, 4);
+INSERT INTO store VALUES (3, "shoes", 20, 20, 3);
+INSERT INTO store VALUES (4, "belts", 5, 4, 1);
+INSERT INTO store VALUES (5, "socks", 11, 2, 5);
+
+SELECT * FROM store;
+
+--display the database ordered by price
+SELECT * FROM store ORDER BY price;
+
+--display the most frequently bought item numerically
+SELECT * FROM store ORDER BY frequency_bought;
+
+--display the sum of the items in stock at the store
+SELECT SUM(quantity) FROM store
